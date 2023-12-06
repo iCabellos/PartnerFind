@@ -33,13 +33,10 @@ class CreateUser(CreateView):
 
 
 class RegisterView(SignupView):
-    template_name = 'registration/register.html'  # Reemplaza con tu plantilla de registro
-    # Puedes agregar más personalización según tus necesidades
+    template_name = 'registration/register.html'
 
     def get(self, request, *args, **kwargs):
-        # Puedes agregar lógica personalizada para el método GET aquí si es necesario
         return render(request, self.template_name)
 
     def post(self, request, *args, **kwargs):
-        # Puedes agregar lógica personalizada para el método POST aquí si es necesario
         return super().post(request, *args, **kwargs)
