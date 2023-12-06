@@ -1,7 +1,7 @@
 # PartnerFind
 Hello, I am creating an app to facilitate the creation of TCG (Trading Card Game) matches, 
 where you can join based on your region. Currently, I am focusing on Magic, but in the future, 
-it will support various TCGs such as Pokemon, One Piece, Digimon, etc.
+it will support various TCGs such as Pokémon, One Piece, Digimon, etc.
 
 TODO:
 0.1-v0.5
