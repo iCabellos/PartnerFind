@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="bg-light">
+            <div class="card-header">
+                <h2 class="mb-0">Registro de Usuario</h2>
+            </div>
+            <div class="card-body mb-5">
+                <form method="post" action="{% url 'register' %}" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="form-group mb-3">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-dark">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Agregar los CDN de Bootstrap y MDBootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/dist/css/mdb.min.css" rel="stylesheet">
+
+<!-- Agregar los scripts de Bootstrap y MDBootstrap al final del cuerpo -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/dist/js/mdb.min.js"></script>
+{% endblock %}

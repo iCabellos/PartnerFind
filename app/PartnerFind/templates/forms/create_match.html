@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Form Create Match Section -->
+<div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Crea una partida</b></h4>
+    <hr class="w3-opacity">
+    <form action="" target="_blank">
+        <div class="w3-section">
+            <label>Usuario</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Descripción</label>
+            <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <div class="w3-section">
+            <label>Lugar</label>
+            <input class="w3-input w3-border" type="text" name="Lugar" required>
+        </div>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+                class="fa fa-paper-plane w3-margin-right"></i>Crear partida
+        </button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+<header id="match-list">
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+            class="fa fa-bars"></i></span>
+    <div class="container">
+        <h1><b>Lista de partidas</b></h1>
+        <div class="w3-section w3-bottombar w3-padding-16">
+            <span class="w3-margin-right">Filtros:</span>
+            <button class="btn btn-dark">Todos</button>
+        </div>
+    </div>
+</header>
+<!-- First Photo Grid-->
+{% for match in matchs %}
+<div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+            <p><b>{{ match.match_name }}: {{ match.match_id }}</b></p>
+            <p>Jugadores:</p>
+            <ol>
+                {% for player in match.players.all %}
+                <li>{{ player }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Second Photo Grid-->
+<!-- TODO: que sea dinámico -->
+<div class="w3-row-padding" style="display: none">
+    <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+            <p><b>Lorem Ipsum</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                congue gravida diam non fringilla.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Pagination -->
+<div class="text-center p-4" style="display: none">
+    <div class="btn-toolbar">
+        <a href="#" class="btn btn-secondary">«</a>
+        <a href="#" class="btn btn-dark">1</a>
+        <a href="#" class="btn btn-secondary">2</a>
+        <a href="#" class="btn btn-secondary">3</a>
+        <a href="#" class="btn btn-secondary">4</a>
+        <a href="#" class="btn btn-secondary">»</a>
+    </div>
+</div>
+<!-- ENDTODO -->
+
+<!-- Form Create Match Section -->
+<div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Crea una partida</b></h4>
+    <hr class="w3-opacity">
+    <form action="" target="_blank">
+        <div class="w3-section">
+            <label>Usuario</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Descripción</label>
+            <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <div class="w3-section">
+            <label>Lugar</label>
+            <input class="w3-input w3-border" type="text" name="Lugar" required>
+        </div>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+                class="fa fa-paper-plane w3-margin-right"></i>Crear partida
+        </button>
+    </form>
+</div>
+{% endblock %}
