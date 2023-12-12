@@ -8,11 +8,14 @@
         <p class="w3-text-grey">Tu app para buscar partida Commander</p>
     </div>
     <div class="w3-bar-block">
-        <a href="{% url 'index' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+        <a href="{% url 'index' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding
+        {% if current_url == 'index' %}w3-text-teal{% endif %}"><i
                 class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a>
-        <a href="{% url 'create-match' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+        <a href="{% url 'create-match' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding
+        {% if current_url == 'create-match' %}w3-text-teal{% endif %}"><i
                 class="fa fa-envelope fa-fw w3-margin-right"></i>CREAR PARTIDA</a>
-        <a href="{% url 'register' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+        <a href="{% url 'register' %}" onclick="w3_close()" class="w3-bar-item w3-button
+        {% if current_url == 'register' %}w3-text-teal{% endif %}"><i
                 class="fa fa-user fa-fw w3-margin-right"></i>Mi PartnerFind</a>
     </div>
 </nav>
