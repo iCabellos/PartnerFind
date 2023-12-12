@@ -7,8 +7,8 @@ TODO:
 0.1-v0.5
 - It will need to function smoothly.
 - Matches can be created in a specific location.
-- Users can sign up for a match.
-- Users can set game rules for the match.
+- Users can sign up for a match. ✅
+- Users can set game rules for the match. ✅
 - Users can indicate whether they won or lost.
 - Users can provide a review for other players along with a small rating from 0-10.
 - Users can specify the commander they will use in the match (TCG Magic Commander).
